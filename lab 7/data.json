@@ -1,0 +1,8 @@
+{
+  "students": [
+    { "name": "Krish", "age": 20, "city": "Rajkot" },
+    { "name": "Aarav", "age": 19, "city": "Surat" }
+  ],
+  "college": "Darshan University",
+  "year": 2026
+}
