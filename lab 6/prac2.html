@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Type your message:</h3>
+    
+    <textarea id  = "msg" rows="5" cols="40" maxlength="100"></textarea>
+    <p>Remaining characters:<span id="remaining">100</span></p>
+
+    <script>
+        const textarea=document.getElementById("msg");
+        const remaining=document.getElementById("remaining");
+        const limt =100;
+        const used = 0;
+
+        textarea.addEventListener("input", () => {
+        const used = textarea.value.length;
+        const left = limt - used;
+
+        remaining.textContent=left;
+        if(used == limit){
+            alert("100 characters reached!");
+        }
+        });
+    </script>
+</body>
+</html>
