@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>register validate form</title>
+</head>
+<body>
+    <form onsubmit="return validateRegister()">
+        Username: <input type="text" id="Username" />
+        <span id="userError" class="error" ></span><br /> <br />
+        Password: <input type="text" id="password" />
+        <span id="passError" class="error" ></span><br /> <br />
+
+        <input type="submit" value="register" />
+
+    </form>
+
+    <script>
+        function validateRegister(){
+            let valid = true;
+
+            document.getElementById("userError").innerHTML = "";
+            document.getElementById("EmailError").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+
+            let Username = document.getElementById("Username").value;
+            let password = document.getElementById("password").value;
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            
+            if (Username == "") {
+                document.getElementById("userError").innerHTML ="username is required";
+                valid = false;
+
+            }
+            if(password.length < 6 ) {
+                document.getElementById("passError").innerHTML = "password must be at least 6 characters";
+                valid= false;
+            }
+            return valid;
+        }
+    </script>
+</body>
+</html>
