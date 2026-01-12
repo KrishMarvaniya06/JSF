@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Enter a string:");
+        let cleanStr = str.toLowerCase().replace(/\s/g, "");
+        let reversedStr = cleanStr.split("").reverse().join("");
+        
+        if (cleanStr === reversedStr) {
+            document.write("'" + str + "' is a PALINDROME");
+        } else {
+            document.write("'" + str + "' is NOT a PALINDROME");
+        }
+    </script>
+</body>
+</html>
